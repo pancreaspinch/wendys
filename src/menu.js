@@ -1,5 +1,3 @@
-
-
 //Returns a borgar div
 function createBorgar(name, alt, price, img) {
     const borgar = document.createElement('div');
