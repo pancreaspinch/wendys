@@ -23,12 +23,8 @@ function createBorgar(name, alt, price, img) {
 //Returns a menu div with borgars
 function createMenu() {
     const menu = document.createElement('div');
-
-    const title = document.createElement('h1');
-    title.textContent = 'WENDY\'S BURGER';
     menu.classList.add('menu');
 
-    menu.appendChild(title);
     menuBorgars.forEach((borgar) => {
         menu.appendChild(borgar);
     });
@@ -36,11 +32,16 @@ function createMenu() {
     return menu;
 }
 
-//Adds menu to content
+//Adds menu to tab
 function renderMenu() {
-    const content = document.getElementById('content');
-    //content.textContent = '';
-    content.appendChild(createMenu());
+    const tab = document.getElementById('tab');
+    tab.textContent = '';
+
+    const title = document.createElement('h1');
+    title.textContent = 'WENDY\'S BURGER';
+
+    tab.appendChild(title);
+    tab.appendChild(createMenu());
 }
 
 //Menu Items

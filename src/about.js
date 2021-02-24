@@ -21,7 +21,7 @@ function createAbout(){
     wendysLink.href = 'https://wendys-firstkitchen.co.jp/menu/'
 
     const fbkLink = document.createElement('a');
-    fbkLink.href = 'https://www.youtube.com/watch?v=94iF6RP3cwk&t=0s'
+    fbkLink.href = 'https://youtu.be/94iF6RP3cwk?t=2718';
 
     const wendysImg = document.createElement('img');
     wendysImg.classList.add('sourceImg');
@@ -31,7 +31,7 @@ function createAbout(){
     const fbkImg = document.createElement('img');
     fbkImg.classList.add('sourceImg');
     fbkImg.src = 'images/fbk.jpg';
-    fbkImg.alt = 'Fubuki';
+    fbkImg.alt = 'Text to Speech';
 
     wendysLink.appendChild(wendysImg);
     fbkLink.appendChild(fbkImg);
@@ -42,7 +42,7 @@ function createAbout(){
     //Description
     description.appendChild(createP('Sir this is a Wendy\'s'));
     description.appendChild(createP('This website is for educational purposes only'));
-    description.appendChild(createP('Sources can be found by following links on this page'));
+    description.appendChild(createP('Sources can be found by clicking the images'));
 
     about.appendChild(title);
     about.appendChild(sources);
@@ -58,11 +58,11 @@ function createP(text){
     return p;
 }
 
-//Adds about to content
+//Adds about to tab
 function renderAbout(){
-    const content = document.getElementById('content');
-    //content.textContent = '';
-    content.appendChild(createAbout());
+    const tab = document.getElementById('tab');
+    tab.textContent = '';
+    tab.appendChild(createAbout());
 }
 
 export default renderAbout;
