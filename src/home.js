@@ -4,10 +4,11 @@ function createHome(){
     home.classList.add('home');
 
     const logo = document.createElement('img');
+    logo.classList.add('logo');
     logo.src =  'https://wendys-firstkitchen.co.jp/headimg/5a40cb4862813-3.png';
     logo.alt = 'images/wendys.png';
 
-    const description = document.createElement('h4');
+    const description = document.createElement('h1');
     description.textContent = 'Sir this is a Wendy\'s'
 
     home.appendChild(logo);
