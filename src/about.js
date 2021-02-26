@@ -35,18 +35,18 @@ function createAbout(){
 
     wendysLink.appendChild(wendysImg);
     fbkLink.appendChild(fbkImg);
-    sources.appendChild(sourcesTitle);
     sources.appendChild(wendysLink);
     sources.appendChild(fbkLink);
 
     //Description
     description.appendChild(createP('Sir this is a Wendy\'s'));
     description.appendChild(createP('This website is for educational purposes only'));
-    description.appendChild(createP('Sources can be found by clicking the images'));
-
+    
     about.appendChild(title);
-    about.appendChild(sources);
     about.appendChild(description);
+    about.appendChild(sourcesTitle);
+    about.appendChild(sources);
+ 
 
     return about;
 }

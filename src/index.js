@@ -6,10 +6,10 @@ function createHeader() {
     const header = document.createElement('header');
     header.classList.add('header');
 
-    // const title = document.createElement('h1');
-    // title.textContent = 'Wendy\'s';
+     const title = document.createElement('img');
+     title.src = 'images/wendys.png';
 
-    // header.appendChild(title);
+    header.appendChild(title);
     header.appendChild(createNav());
 
     return header;
@@ -68,14 +68,14 @@ function setActive(button) {
 
 //Creates a tab for content
 function createTab() {
-    const tab = document.createElement('div');
+    const tab = document.createElement('main');
     tab.setAttribute('id', 'tab');
     return tab;
 }
 
 //Creates the footer
 function createFooter() {
-    const footer = document.createElement('div');
+    const footer = document.createElement('footer');
     footer.classList.add('footer');
 
     const disclaimer = document.createElement('p');
@@ -98,6 +98,7 @@ function createFooter() {
 //Renders the page
 function renderPage() {
     const content = document.getElementById('content');
+    const body = document.getElementsByTagName("BODY")[0];
 
     content.appendChild(createHeader());
     content.appendChild(createTab());
